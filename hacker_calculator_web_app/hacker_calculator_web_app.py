@@ -1,5 +1,4 @@
 import reflex as rx
-import pyperclip as pc
 import re
 from . import expression_eval as ee
 from . import utils as ut
@@ -61,7 +60,7 @@ class DecimalButtonState(rx.State):
     hidden = True
 
     def onClick(self):
-        pc.copy(self.text)
+        return rx.set_clipboard(self.text)
 
 
 class HexButtonState(rx.State):
@@ -69,7 +68,7 @@ class HexButtonState(rx.State):
     hidden = True
 
     def onClick(self):
-        pc.copy(self.text)
+        return rx.set_clipboard(self.text)
 
 
 class BinaryButtonState(rx.State):
@@ -77,7 +76,7 @@ class BinaryButtonState(rx.State):
     hidden = True
 
     def onClick(self):
-        pc.copy(self.text)
+        return rx.set_clipboard(self.text)
 
 
 class GlobalKeyState(rx.State):

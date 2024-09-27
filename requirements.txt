@@ -1,3 +1,2 @@
-pyperclip==1.9.0
 watchdog==4.0.2
 watchfiles==0.24.0
