@@ -11,6 +11,7 @@ class ExpressionInputState(rx.State):
 
     async def onChange(self, text):
         self.text = text.lower()
+        yield
         words = re.findall(r'[0-9a-zA-Z]+$', self.text)
         self.lastWord = "."
         if words:
