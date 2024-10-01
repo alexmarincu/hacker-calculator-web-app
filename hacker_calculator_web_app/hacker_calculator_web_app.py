@@ -32,9 +32,9 @@ class ExpressionInputState(rx.State):
             if result.value.is_integer():
                 resultInt = int(result.value)
                 decimalButtonState.text = str(resultInt)
-                hexButtonState.text = str(hex(resultInt))
+                hexButtonState.text = str(hex(resultInt & 0xFFFFFFFFFFFFFFFF))
                 hexButtonState.hidden = False
-                binaryButtonState.text = str(bin(resultInt))
+                binaryButtonState.text = str(bin(resultInt & 0xFFFFFFFFFFFFFFFF))
                 binaryButtonState.hidden = False
             else:
                 hexButtonState.text = ""
