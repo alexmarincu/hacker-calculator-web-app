@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Setup Python Virtual Environment",
+            "type": "shell",
+            "command": "python scripts/setup_venv.py",
+            "group": {
+                "kind": "build"
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "reflex run",
+            "type": "shell",
+            "command": ".pyvenv/bin/reflex run",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "pyright",
+            "type": "shell",
+            "command": ".pyvenv/bin/pyright | tee reports/pyright-report.txt",
+            "group": {
+                "kind": "build",
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "mypy",
+            "type": "shell",
+            "command": ".pyvenv/bin/mypy . | tee reports/mypy-report.txt",
+            "group": {
+                "kind": "build",
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        }
+    ]
+}

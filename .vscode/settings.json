@@ -1,16 +1,28 @@
 {
-    // python {
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoImportCompletions": true,
     "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.importFormat": "relative",
     "python.analysis.inlayHints.callArgumentNames": "all",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.autoImportCompletions": false,
     "autopep8.args": [
         "--aggressive",
         "--max-line-length=200"
     ],
-    // } python
+    "mypy-type-checker.reportingScope": "workspace",
+    "mypy-type-checker.args": [
+        "--ignore-missing-imports",
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./test",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.terminal.activateEnvironment": false
 }

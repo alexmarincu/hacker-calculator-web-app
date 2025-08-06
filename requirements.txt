@@ -1,2 +1,5 @@
 watchdog==4.0.2
 watchfiles==0.24.0
+mypy
+pyright
+reflex
